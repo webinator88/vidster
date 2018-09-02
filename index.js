@@ -3,7 +3,7 @@ import express from 'express';
 import data from './data/data.json';
 
 const app = express();
-const PORT = process.env.port || 3000;
+const PORT = process.env.port || 5000;
 
 // this is public folder for default route "/"
 // note that leading slash isn't permitted 
