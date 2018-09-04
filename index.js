@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 
 import data from './data/data.json';
 
@@ -16,7 +17,7 @@ app.use('/images', express.static('images'));
 app.use(express.json());
 
 app.get('/', (req, res) =>
-  res.json(data)
+  res.sendFile(path.join(__dirname, 'public/index.html'))
 );
 
 app.get('/item/:id', (req, res) => {
